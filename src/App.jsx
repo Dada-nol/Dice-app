@@ -4,7 +4,7 @@ import Dice from "./components/dice";
 function App() {
   return (
     <>
-      <h1>Dé de la chance !</h1>
+      <h1>🎲 Dé Virtuel</h1>
       <Dice></Dice>
     </>
   );

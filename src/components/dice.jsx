@@ -12,7 +12,7 @@ function Dice() {
 
   return (
     <>
-      <div className="dice">{dice}</div>
+      <div className="dice rolling">{dice}</div>
       <button onClick={rollDice}>Lancer le dé</button>
     </>
   );

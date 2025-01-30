@@ -1,0 +1,30 @@
+body {
+  text-align: center;
+}
+
+.dice {
+  width: 80px;
+  height: 80px;
+  border: solid 2px black;
+  border-radius: 10px;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: large;
+  font-weight: bold;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes roll {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.rolling {
+  animation: roll 0.5s ease-in-out;
+}
