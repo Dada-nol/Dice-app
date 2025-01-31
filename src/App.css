@@ -30,21 +30,22 @@ body {
 }
 
 .scene {
-  width: 150px;
-  height: 150px;
-  perspective: 600px;
+  width: 100vw;
+  height: 100vh;
+  perspective: 800px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 50px auto;
+  overflow: hidden; /* Pour éviter que le cube sorte trop de la page */
+  position: relative;
 }
 
 .cube {
   width: 100px;
   height: 100px;
-  position: relative;
+  position: absolute;
   transform-style: preserve-3d;
-  transition: transform 1s ease-out;
+  transition: transform 1s ease-in-out;
   cursor: pointer;
 }
 
