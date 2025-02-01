@@ -2,17 +2,18 @@ import { useState } from "react";
 
 function Dice3D() {
   const [rotation, setRotation] = useState({ x: 0, y: 0 });
-  const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [position, setPosition] = useState(0);
 
   const rollDice = () => {
     const xRotation = [0, 90, 180, 270][Math.floor(Math.random() * 4)];
     const yRotation = [0, 90, 180, 270][Math.floor(Math.random() * 4)];
-
+    /* 
     const xMove = Math.random() * 200 - 100;
-    const yMove = Math.random() * 200 - 100;
+    const yMove = Math.random() * 200 - 100; */
 
     setRotation({ x: xRotation, y: yRotation });
-    setPosition({ x: position.x + xMove, y: position.y + yMove });
+    /*  setPosition({x: position.x + xMove, y: position.y + yMove}) */
+    setPosition((prevZ) => prevZ - 200);
   };
 
   return (
@@ -22,7 +23,8 @@ function Dice3D() {
           className="cube"
           onClick={rollDice}
           style={{
-            transform: `translate(${position.x}px, ${position.y}px) rotateX(${rotation.x}deg) rotateY(${rotation.y}deg)`,
+            // transform: `translate(${position.x}px, ${position.y}px) rotateX(${rotation.x}deg) rotateY(${rotation.y}deg)`,
+            transform: `translateZ(${position}px) rotateX(${rotation.x}deg) rotateY(${rotation.y}deg)`,
           }}
         >
           <div className="face front">1</div>
