@@ -26,7 +26,7 @@ body {
 }
 
 .rolling {
-  animation: roll 0.5s ease-in-out;
+  animation: roll 0.5s ease-out;
 }
 
 .scene {
